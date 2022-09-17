@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+body {
+    background-color: #0e0e0e;
+}
+/* navber */
+.navber {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0;
+    z-index: 9999;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navber__box {
+    padding-right: 15px;
+    padding-left: 15px;
+    /* margin-right: auto;
+    margin-left: auto; */
+    margin: 0 80px;
+}
+.navber__logo {
+    float: left;
+}
+.navber__logo > button {
+    background-color: #0e0e0e;
+    border: 0;
+}
+.navber__logo > button > a {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 48px;
+}
+.navber__logo > button > a:hover {
+    color: coral;
+}
+.navber__list {
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 48px;
+}
+.navber__list > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+.navber__list > ul > li {
+    padding-left: 2em;
+}
+.navber__list > ul > li > a:hover {
+    color: coral;
+}
+.navber__toggleBth {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    font-size: 24px;
+    background-color: #fff;
+    padding: 9px 10px;
+    border-radius: 5px;
+}
+.navber__toggleBth .button-bar {
+    background-color: #888;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+.navber__toggleBth .button-bar + .button-bar {
+    margin-top: 4px;
+}
+.navber__toggleBth:hover {
+    background-color: coral;
+    cursor: pointer;
+}
+/* 반응형 */
+@media screen and (max-width: 768px) {
+    .navber__list {
+        display: none;
+        width: 100%;
+        padding: 0;
+    }
+    .navber__list > ul {
+        flex-direction: column;
+    }
+    .navber__list > ul > li {
+        margin-left: -17px;
+    }
+    .navber__toggleBth {
+        display: block;
+    }
+    .navber__list.active {
+        display: inline-block;
+    }
+}
